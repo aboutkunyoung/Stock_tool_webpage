@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock DCA Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+        <header>
+            <h1>유용..한? 주식 거래 도구</h1>
+        </header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li>물타기 계산기</li>
+                    <li>방명록</li>
+                </ul>
+            </nav>
+            <div class="divider"></div> <!-- 위치 조정이 가능한 선 -->
+                 <nav2>
+                 <form id="dca-form">
+                    <label for="initial_price">기존 주식 가격:</label>
+                    <input type="number" id="initial_price" name="initial_price" step="0.01" required>
+            
+                    <label for="initial_shares">기존 주식 수:</label>
+                    <input type="number" id="initial_shares" name="initial_shares" step="0.01" required>
+            
+                    <label for="additional_price">추가 매입 가격:</label>
+                    <input type="number" id="additional_price" name="additional_price" step="0.01" required>
+            
+                    <label for="additional_shares">추가 매입 주식 수:</label>
+                    <input type="number" id="additional_shares" name="additional_shares" step="0.01" required>
+            
+                <button type="submit">계산하기</button>
+                </form>
+                </nav2>
+            <div id="result"></div>
+        </div>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

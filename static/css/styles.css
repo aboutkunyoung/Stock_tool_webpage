@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+header {
+    display: flex;
+    color: rgb(6, 6, 6);
+    padding: 20px 20px;
+    border-bottom: 1px solid black;
+    position: absolute; /* Header를 페이지의 좌측 위로 올리기 위해 position 설정 */
+    top: 0; /* 페이지의 최상단으로 이동 */
+    left: 0; /* 페이지의 최좌측으로 이동 */
+    width: 100%; /* 밑줄이 페이지 끝까지 그어지도록 설정 */
+    box-sizing: border-box; /* 패딩을 포함한 크기 계산 */
+}
+
+nav {
+    grid-area: nav;
+    padding: 20px;
+    position: absolute; /* Header 아래에 위치시키기 위해 position 설정 */
+    top: calc(100px + 1px); /* Header 높이 + border-bottom의 두께를 더해서 아래에 위치 */
+    left: 20px; /* Header의 padding-left 값과 동일하게 설정 */
+    width: calc(100% - 40px); /* 페이지 너비에서 좌우 padding 값을 빼서 설정 */
+    box-sizing: border-box; /* 패딩을 포함한 크기 계산 */
+
+}
+.divider {
+    position: absolute;
+    top: 124px; /* 원하는 위치로 조정 */
+    right: 1650px; /* 원하는 위치로 조정 */
+    width: 1px;
+    height: 900px;
+    background-color: black;
+}
+
+nav2 {
+    grid-area: nav2;
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute; /* Header 아래에 위치시키기 위해 position 설정 */
+    top: calc(100px + 1px); /* Header 높이 + border-bottom의 두께를 더해서 아래에 위치 */
+    left: 330px; /* Header의 padding-left 값과 동일하게 설정 */
+    width: 300px; /* 페이지 너비에서 좌우 padding 값을 빼서 설정 */
+    box-sizing: 10px; /* 패딩을 포함한 크기 계산 */ 
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    margin: 10px 0;
+}
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+}
+button {
+    padding: 10px 20px;
+    background-color: #4f5760;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #4f5760;
+}
+#result {
+    grid-area: form;
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 550px; 
+    left: 330px;
+    width: 300px;
+    box-sizing: border-box;
+}
+
